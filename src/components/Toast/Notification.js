@@ -1,6 +1,9 @@
 import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Content from './Content';
+import infoIcon from '../../images/warning.svg';
+import warningIcon from '../../images/info.svg';
+import successIcon from '../../images/success.svg';
+import errorIcon from '../../images/error.svg'; 
 
 class Notification extends React.Component {
   constructor() {
@@ -57,3 +60,20 @@ class Notification extends React.Component {
 }
 
 export default Notification;
+
+const Content = props => {
+  const { content, type } = props;
+  const icon = {
+    'info': infoIcon,
+    'success': successIcon,
+    'error': errorIcon,
+    'warning': warningIcon
+  }[type];
+
+  return(
+    <div className={`toast-notice ${type}`}>
+      <img src={icon} alt="icon" className="toast-icon" />
+      <span>{content}</span>
+    </div>
+  );
+};

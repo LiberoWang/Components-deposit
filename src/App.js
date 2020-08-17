@@ -1,10 +1,10 @@
 import React from 'react';
-import Toast from './components/Toast';
+import ToastContent from './components/ToastContent';
 
 function App() {
   return (
     <div className="App">
-      <Toast />
+      <ToastContent />
     </div>
   );
 }
