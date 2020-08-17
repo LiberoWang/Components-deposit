@@ -25,7 +25,7 @@ function createNotification() {
 }
 
 let notification;
-const notice = (type, content, duration = 2000, onClose, mask = true) => {
+const notice = (type, content, duration = 1000, onClose, mask = true) => {
   if (!notification) {
     notification = createNotification();
   }

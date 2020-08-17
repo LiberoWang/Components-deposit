@@ -1,17 +1,21 @@
 import React from 'react';
+import infoIcon from '../../images/warning.svg';
+import warningIcon from '../../images/info.svg';
+import successIcon from '../../images/success.svg';
+import errorIcon from '../../images/error.svg'; 
 
 const Content = props => {
   const { content, type } = props;
-  const icons = {
-    'info': 'info',
-    'success': 'success',
-    'error': 'error',
-    'warning': 'warning'
+  const icon = {
+    'info': infoIcon,
+    'success': successIcon,
+    'error': errorIcon,
+    'warning': warningIcon
   }[type];
 
   return(
     <div className={`toast-notice ${type}`}>
-      <span>{icons}</span>
+      <img src={icon} alt="logo" className="toast-icon" />
       <span>{content}</span>
     </div>
   );
