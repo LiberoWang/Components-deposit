@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Notification from './Notification';
+require('./index.scss');
 
 function createNotification() {
   const div = document.createElement('div');
   document.body.appendChild(div);
   const ref = React.createRef();
   ReactDOM.render(<Notification ref={ref} />, div);
+
+  // 另一个写法：
+  // noticeDiv = ReactDOM.render(<Notification />, div);
+  // noticeDiv.addNotice(notice);
 
   return {
     addNotice(notice) {
@@ -20,7 +25,7 @@ function createNotification() {
 }
 
 let notification;
-const notice = (type, content, duration = 1000, onClose, mask = true) => {
+const notice = (type, content, duration = 2000, onClose, mask = true) => {
   if (!notification) {
     notification = createNotification();
   }

@@ -1,6 +1,5 @@
 import React from 'react';
-import Toast from './Toast';
-import './App.css';
+import Toast from './components/Toast';
 
 function App() {
   return (
