@@ -2,6 +2,13 @@
   margin-top: 50px;
   text-align: center;
 
+  .hidden {
+    opacity: 0;
+  }
+  .nomarl {
+    opacity: 1;
+  }
+
   .toast-notice-hover {
     width: 200px;
   }
