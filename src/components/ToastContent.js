@@ -1,6 +1,5 @@
 import React from 'react';
-import Toast from '../Toast';
-require('./index.scss');
+import Toast from './Toast';
 
 class ToastContent extends React.Component {
 
